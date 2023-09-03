@@ -19,13 +19,14 @@ const {
     changePasswordValid
 } = require('../modules/user/user.validation');
 
+const decodeToken = require('../Auth/tokenDecoding');
 
+app.get('/verifyAccount', verifyAccount);
 app.post('/signUp', validateRequest(signUpValid), signUp);
 app.post('/login', validateRequest(loginValid), login);
 app.post('/forgetPassword', validateRequest(forgetPasswordValid), forgetPassword);
-app.put('/editProfile', validateRequest(editProfileValid), editProfile);
-app.patch('/changePassword', validateRequest(changePasswordValid), changePassword);
-app.get('/verifyAccount', verifyAccount);
+app.patch('/editProfile', decodeToken(), validateRequest(editProfileValid), editProfile);
+app.patch('/changePassword', decodeToken(), validateRequest(changePasswordValid), changePassword);
 
 
 module.exports = app; 
