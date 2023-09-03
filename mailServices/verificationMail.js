@@ -13,7 +13,7 @@ exports.setUpMails = async(emailType, emailCredentials) => {
     let token = jwt.sign({ userMail: emailCredentials.email }, process.env.SECRET_TOKEN, { expiresIn: `1d` });
     mailOptions['subject'] = "verify your account";
     mailOptions['text'] = "please click the verify button to verify your account";
-    mailOptions['html'] = `<b> <a href= 'http://localhost:${process.env.port}/verifyAccount?token=${token}' target= '_blank'>verify</b>`;
+    mailOptions['html'] = `<b> <a href= 'https://inventory.onrender.com/verifyAccount?token=${token}' target= '_blank'>verify</b>`;
 
   }
 
