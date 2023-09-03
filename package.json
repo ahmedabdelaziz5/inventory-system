@@ -2,10 +2,10 @@
   "name": "task1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "nodemon app"
+    "start": "nodemon index"
   },
   "author": "",
   "license": "ISC",
