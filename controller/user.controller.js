@@ -13,7 +13,7 @@ exports.signUp = async (req, res) => {
                 bussinesName, inventoryName, bussinesIndustry
             } = req.body;
 
-        var user = await userModel.findOne({ email: email }).lean();
+        let user = await userModel.findOne({ $or: [{ email }, { inventoryName }, {userName}] }).lean();
 
         if (user) {
             return res.status(400).json({
@@ -71,7 +71,7 @@ exports.login = async (req, res) => {
                 message: "incorrct password "
             });
         }
-        let token = jwt.sign({ email: user.email, userName: user.userName }, process.env.SECRET_TOKEN);
+        let token = jwt.sign({ email: user.email, userName: user.userName, inventoryName : user.inventoryName, userId : user._id }, process.env.SECRET_TOKEN);
         delete user.password;
         delete user.isVerified;
         return res.status(200).json({
@@ -134,7 +134,7 @@ exports.editProfile = async (req, res) => {
         const { userName, email, bussinesName, inventoryName, bussinesIndustry } = req.body;
 
         const userMail = req.user.email;
-        let user = await userModel.findOne({ email: userMail }).lean().select("email userName");
+        let user = await userModel.findOneAndUpdate({ email: userMail }, {userName, email, bussinesName, inventoryName, bussinesIndustry}).lean().select("email userName");
 
         if (!user) {
             return res.status(400).json({
@@ -142,11 +142,8 @@ exports.editProfile = async (req, res) => {
             })
         }
 
-        await userModel.updateOne({ email: userMail, userName: user.userName }, { userName, email, bussinesName, inventoryName, bussinesIndustry })
-        .then(async () => {
-            res.status(200).json({
-                message: "success"
-            })
+        res.status(200).json({
+            message: "success"
         })
     }
 

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose') ; 
-const saltRounds = 7 ;
 
 const userSchema = new mongoose.Schema({
     email  : { type : String, required : true } , 

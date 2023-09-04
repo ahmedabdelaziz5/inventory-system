@@ -14,7 +14,7 @@ connection();
 
 //routes
 app.use(require('./route/user.route')) ; 
-// app.use(require('./route/product.route')) ; 
+app.use(require('./route/product.route')) ; 
 
 const http = require("http");
 const server = http.createServer(app);

@@ -7,9 +7,7 @@ const {
     editProfile,
     changePassword,
     verifyAccount
-} = require('../controller/user.controller');
-
-const { validateRequest } = require('../validator/req.validation');
+} = require('../controller/user.controller'); // controllers 
 
 const {
     signUpValid,
@@ -17,9 +15,11 @@ const {
     forgetPasswordValid,
     editProfileValid,
     changePasswordValid
-} = require('../modules/user/user.validation');
+} = require('../modules/user/user.validation'); // validation schemas 
 
-const decodeToken = require('../Auth/tokenDecoding');
+const { validateRequest } = require('../validator/req.validation'); // middleware to validate request body 
+const decodeToken = require('../Auth/tokenDecoding'); // middleware to decode token 
+const { monitorEventLoopDelay } = require('perf_hooks');
 
 app.get('/verifyAccount', verifyAccount);
 app.post('/signUp', validateRequest(signUpValid), signUp);
@@ -29,4 +29,4 @@ app.patch('/editProfile', decodeToken(), validateRequest(editProfileValid), edit
 app.patch('/changePassword', decodeToken(), validateRequest(changePasswordValid), changePassword);
 
 
-module.exports = app; 
+module.exports = app ; 
