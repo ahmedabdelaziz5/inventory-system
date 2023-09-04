@@ -2,7 +2,7 @@
 
 #### This was my first task on my internship @Asterisc Technocra 
 
-#### Using these technologies :
+#### I used these technologies :
 ![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
 ![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
 ![Static Badge](https://img.shields.io/badge/16.3.1-dotenv-yellow)
@@ -82,5 +82,5 @@
 
 
 
-#### note : all the services is on production mode using onrender cloud services
+#### note : all the services is full production using `onrender` cloud services
 
