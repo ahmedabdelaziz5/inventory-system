@@ -1,8 +1,8 @@
-# inventory application 
+# inventory application : 
 
-#### The objective is to ensure accurate recording, computation, and production of sales reports, providing reliable insights into business performance. By achieving these goals, the project aims to enhance operational efficiency, facilitate informed decision-making, and optimize sales and inventory management processes
+#### This was my first task on my internship @Asterisc Technocra 
 
-#### You can mentor , record and keep track of your products and bussiness
+#### The objective is to ensure accurate recording, computation, and production of sales reports, providing reliable insights into business performance. By achieving these goals, the project aims to enhance mentorint , recording , keep track of products , bussiness and inventory management processes
 
 # User module :
 
@@ -60,13 +60,15 @@
 
 |Endpoint|Method|Usage
 |-------:|-----:|-----
-|/addProduct|POST|allow you t ocreate account 
-|/deleteProduct/:productId|DELETE|allow you to sign in your account
-|/updateProduct/:productId|PUT|allow you to ask for a new password
-|/getSpecificProduct/:productId|POST|allow you to update/change your password
-|/getSpecificCategory/:categoryName|POST|allow you to edit/update youe prodile data
-|/getLimitedItems|POST|allow you to send a verification mail after creating account
-|/getAllProducts|POST|
+|/addProduct|POST|allow you to add your products
+|/deleteProduct/:productId|DELETE|allow you to delete any product
+|/updateProduct/:productId|PUT|allow you to update/edit any product
+|/getSpecificProduct/:productId|POST|allow you to search for any product
+|/getSpecificCategory/:categoryName|POST|allow you to get all products that belongs a specific category
+|/getLimitedItems|POST|allow you to get all the limited products which need to be refiled
+|/getAllProducts|POST|allow you to get all the products you have in your inventory system
 
 
+
+#### note : all the services is on production mode using onrender cloud services
 
