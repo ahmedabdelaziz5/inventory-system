@@ -83,4 +83,5 @@
 
 
 #### note : all the services is full production using `onrender` cloud services
+#### you can run the project using the following command : `npm start`
 
