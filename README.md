@@ -2,6 +2,18 @@
 
 #### This was my first task on my internship @Asterisc Technocra 
 
+#### Using these technologies :
+![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
+![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
+![Static Badge](https://img.shields.io/badge/16.3.1-dotenv-yellow)
+![Static Badge](https://img.shields.io/badge/4.18.2-express-blue)
+![Static Badge](https://img.shields.io/badge/17.10.1-joi-green)
+![Static Badge](https://img.shields.io/badge/9.0.2-jsonwebtoken-purple)
+![Static Badge](https://img.shields.io/badge/7.0.4-mongoose-white)
+![Static Badge](https://img.shields.io/badge/20.5.0-node-darkgreen)
+![Static Badge](https://img.shields.io/badge/6.9.4-nodemailer-orange)
+![Static Badge](https://img.shields.io/badge/3.0.1-nodemon-black)
+
 #### The objective is to ensure accurate recording, computation, and production of sales reports, providing reliable insights into business performance. By achieving these goals, the project aims to enhance mentorint , recording , keep track of products , bussiness and inventory management processes
 
 # User module :
