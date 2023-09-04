@@ -12,7 +12,7 @@
 ![Static Badge](https://img.shields.io/badge/7.0.4-mongoose-white)
 ![Static Badge](https://img.shields.io/badge/20.5.0-node-darkgreen)
 ![Static Badge](https://img.shields.io/badge/6.9.4-nodemailer-orange)
-![Static Badge](https://img.shields.io/badge/3.0.1-nodemon-black)
+![Static Badge](https://img.shields.io/badge/3.0.1-nodemon-09c)
 
 #### The objective is to ensure accurate recording, computation, and production of sales reports, providing reliable insights into business performance. By achieving these goals, the project aims to enhance mentorint , recording , keep track of products , bussiness and inventory management processes
 
