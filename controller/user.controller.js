@@ -92,7 +92,7 @@ exports.login = async (req, res) => {
 exports.forgetPassword = async (req, res) => {
     try {
         const { email } = req.body;
-        let isFound = await userModel.findOne({ email }).lean().select("_id");
+        let isFound = await userModel.findOne({ email }).lean().select("_id isVerified");
 
         if (!isFound) {
             return res.status(200).json({

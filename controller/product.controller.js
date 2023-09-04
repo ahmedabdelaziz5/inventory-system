@@ -1,5 +1,5 @@
 const  productModel  = require('../modules/product/product.model');
-const { islimited } = require('../helpers/isLimitedProduct');
+const { checkIslimited } = require('../helpers/isLimitedProduct');
 const mongoose = require('mongoose');
 
 exports.addProduct = async (req, res) => {
@@ -10,7 +10,7 @@ exports.addProduct = async (req, res) => {
         } = req.body;
 
         const { userName, userId, inventoryName } = req.user;
-        let result = islimited(limit, productQuantity);
+        let result = checkIslimited(limit, productQuantity);
         await productModel.create({
             userName, userId, inventoryName, islimited: result,
             productName, productSerialNumber, productQuantity, limit,
@@ -82,7 +82,8 @@ exports.updateProduct = async (req, res) => {
             });
         }
 
-        let result = islimited(limit, productQuantity);
+        let result =  checkIslimited(limit, productQuantity);
+
         let product = await productModel.findOneAndUpdate({ _id: productId, userId, inventoryName }, {
             productName, productSerialNumber, productQuantity, limit,
             productCategory, countryOfProductOrigin, productPrice, islimited: result
@@ -124,6 +125,8 @@ exports.getSpecificProduct = async (req, res) => {
                 message: "there is no such product !"
             });
         }
+
+        console.log(productId);
 
         let product = await productModel.findOne({ userId, _id: productId, inventoryName }).select(queryFilter).lean()
 
