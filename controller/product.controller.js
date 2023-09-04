@@ -194,7 +194,7 @@ exports.getLimitedItems = async (req, res) => {
         const skip = (page - 1) * limit;
         const queryFilter = "-userName -inventoryName -userId";
 
-        mongoose.set('debug', true);
+        // mongoose.set('debug', true);
         let data = await productModel.find({ userId, inventoryName, islimited: true }).select(queryFilter).sort({ addedAt: -1 }).skip(skip).limit(limit).lean();
         let totalNumOfItems = await productModel.countDocuments({ userId, islimited: true });
 
@@ -235,7 +235,7 @@ exports.getAllProducts = async (req, res) => {
 
         if (!data.length) {
             return res.status(200).json({
-                message: "there is no produts in inventory yet !"
+                message: "there is no products in inventory yet !"
             })
         }
 
@@ -257,3 +257,9 @@ exports.getAllProducts = async (req, res) => {
         })
     }
 }
+
+
+
+
+
+
