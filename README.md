@@ -1,6 +1,6 @@
 # inventory application : 
 
-#### This was my first task on my internship @Asterisc Technocra 
+#### This was my first task on my internship @Asterisc Technocrat 
 
 #### I used these technologies :
 ![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
