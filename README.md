@@ -4,7 +4,6 @@
 
 #### I used these technologies :
 ![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
-![Static Badge](https://img.shields.io/badge/5.1.1-bcrypt-red)
 ![Static Badge](https://img.shields.io/badge/16.3.1-dotenv-yellow)
 ![Static Badge](https://img.shields.io/badge/4.18.2-express-blue)
 ![Static Badge](https://img.shields.io/badge/17.10.1-joi-green)
