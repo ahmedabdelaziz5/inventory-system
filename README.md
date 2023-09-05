@@ -74,10 +74,10 @@
 |/addProduct|POST|allow you to add your products
 |/deleteProduct/:productId|DELETE|allow you to delete any product
 |/updateProduct/:productId|PUT|allow you to update/edit any product
-|/getSpecificProduct/:productId|POST|allow you to search for any product
-|/getSpecificCategory/:categoryName|POST|allow you to get all products that belongs a specific category
-|/getLimitedItems|POST|allow you to get all the limited products which need to be refiled
-|/getAllProducts|POST|allow you to get all the products you have in your inventory system
+|/getSpecificProduct/:productId|GET|allow you to search for any product
+|/getSpecificCategory/:categoryName|GET|allow you to get all products that belongs a specific category
+|/getLimitedItems|GET|allow you to get all the limited products which need to be refiled
+|/getAllProducts|GET|allow you to get all the products you have in your inventory system
 
 
 
