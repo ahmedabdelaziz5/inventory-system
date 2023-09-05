@@ -40,7 +40,7 @@
 |/login|POST|allow you to sign in your account
 |/forgetPassword|POST|allow you to ask for a new password
 |/changePassword|PATCH|allow you to update/change your password
-|/editProfile|POST|allow you to edit/update youe prodile data
+|/editProfile|PATCH|allow you to edit/update youe prodile data
 |/verifyAccount|GET|allow you to send a verification mail after creating account
 
 
