@@ -46,7 +46,7 @@
 
 # Product module :
 
-#### user schema : 
+#### Product schema : 
 
 ```JavaScript
 {
