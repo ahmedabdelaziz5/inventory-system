@@ -18,7 +18,7 @@ const {
 const {validateRequest} = require('../validator/req.validation'); // validation schemas 
 const decodeToken = require('../Auth/tokenDecoding'); // middleware to decode token 
 
-app.get('/getSpecificProduct/:productId',decodeToken(), getSpecificProduct) ; 
+app.get('/getSpecificProduct/:productName',decodeToken(), getSpecificProduct) ; 
 app.get('/getSpecificCategory/:categoryName',decodeToken(), getSpecificCategory) ; 
 app.get('/getLimitedItems', decodeToken(), getLimitedItems) ; 
 app.get('/getAllProducts', decodeToken(), getAllProducts) ; 

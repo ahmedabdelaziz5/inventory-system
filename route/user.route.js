@@ -19,7 +19,6 @@ const {
 
 const { validateRequest } = require('../validator/req.validation'); // middleware to validate request body 
 const decodeToken = require('../Auth/tokenDecoding'); // middleware to decode token 
-const { monitorEventLoopDelay } = require('perf_hooks');
 
 app.get('/verifyAccount', verifyAccount);
 app.post('/signUp', validateRequest(signUpValid), signUp);

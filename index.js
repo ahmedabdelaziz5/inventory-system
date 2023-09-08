@@ -24,7 +24,3 @@ server.listen(process.env.PORT || 3000, process.env.LOCAL_HOST || "0.0.0.0", () 
     console.log(`Server is up and runing on port ${process.env.PORT}!`)
 })
 
-//localhost port
-// server.listen(process.env.PORT, ()=>{
-//     console.log(`server is running on ${process.env.PORT}`) ;
-// });

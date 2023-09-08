@@ -11,13 +11,16 @@ exports.addProduct = async (req, res) => {
 
         const { userName, userId, inventoryName } = req.user;
         let result = checkIslimited(limit, productQuantity);
+        const productId = new mongoose.Types.ObjectId ;
+
         await productModel.create({
-            userName, userId, inventoryName, islimited: result,
+            _id : productId, userName, userId, inventoryName, islimited: result,
             productName, productSerialNumber, productQuantity, limit,
             productCategory, countryOfProductOrigin, productPrice, addedAt: Date.now()
         }).then(() => {
             return res.status(200).json({
-                message: "success"
+                message: "success",
+                productId
             })
         })
     }
@@ -116,19 +119,11 @@ exports.updateProduct = async (req, res) => {
 exports.getSpecificProduct = async (req, res) => {
     try {
 
-        const productId = req.params.productId;
+        const productName = req.params.productName;
         const { userId, inventoryName } = req.user;
         const queryFilter = "-userId -inventoryName -email";
 
-        if (!mongoose.Types.ObjectId.isValid(productId)) {
-            return res.status(400).json({
-                message: "there is no such product !"
-            });
-        }
-
-        console.log(productId);
-
-        let product = await productModel.findOne({ userId, _id: productId, inventoryName }).select(queryFilter).lean()
+        let product = await productModel.find({ productName, userId, inventoryName }).select(queryFilter).lean()
 
         if (!product) {
             return res.status(400).json({
@@ -143,7 +138,6 @@ exports.getSpecificProduct = async (req, res) => {
 
     }
     catch (err) {
-        // console.log(err);
         return res.status(500).json({
             message: "error",
             err: new Error(err)
