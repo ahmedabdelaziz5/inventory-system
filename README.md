@@ -87,4 +87,4 @@
 #### you can run the project using the following command : `npm start`
 
 
-#### all get request has a pagination you can send page ( default = 1 ) and limit default = 10 ) in the URL 
+#### all get requests has a pagination you can send page ( default = 1 ) and limit default = 10 ) in the URL 
