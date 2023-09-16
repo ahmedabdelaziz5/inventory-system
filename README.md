@@ -12,6 +12,7 @@
 ![Static Badge](https://img.shields.io/badge/20.5.0-node-darkgreen)
 ![Static Badge](https://img.shields.io/badge/6.9.4-nodemailer-orange)
 ![Static Badge](https://img.shields.io/badge/3.0.1-nodemon-09c)
+![Static Badge](https://img.shields.io/badge/cors-2.8.5-0f3)
 
 #### The objective is to ensure accurate recording, computation, and production of sales reports, providing reliable insights into business performance. By achieving these goals, the project aims to enhance mentorint , recording , keep track of products , bussiness and inventory management processes
 
@@ -82,5 +83,8 @@
 
 
 #### note : all the services is full production using `onrender` cloud services
+
 #### you can run the project using the following command : `npm start`
 
+
+#### all get request has a pagination you can send page ( default = 1 ) and limit default = 10 ) in the URL 
