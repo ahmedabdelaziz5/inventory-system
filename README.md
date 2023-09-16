@@ -37,12 +37,12 @@
 
 |Endpoint|Method|Usage
 |-------:|-----:|-----
-|/signUp|POST|allow you t ocreate account 
-|/login|POST|allow you to sign in your account
-|/forgetPassword|POST|allow you to ask for a new password
-|/changePassword|PATCH|allow you to update/change your password
-|/editProfile|PATCH|allow you to edit/update youe prodile data
-|/verifyAccount|GET|allow you to send a verification mail after creating account
+|/signUp|POST|allows you t ocreate account 
+|/login|POST|allows you to sign in your account
+|/forgetPassword|POST|allows you to ask for a new password
+|/changePassword|PATCH|allows you to update/change your password
+|/editProfile|PATCH|allows you to edit/update youe prodile data
+|/verifyAccount|GET|allows you to send a verification mail after creating account
 
 
 # Product module :
@@ -71,13 +71,13 @@
 
 |Endpoint|Method|Usage
 |-------:|-----:|-----
-|/addProduct|POST|allow you to add your products
-|/deleteProduct/:productId|DELETE|allow you to delete any product
-|/updateProduct/:productId|PUT|allow you to update/edit any product
-|/getSpecificCategory/:categoryName|GET|allow you to get all products that belongs a specific category
-|/getLimitedItems|GET|allow you to get all the limited products which need to be refiled
-|/getAllProducts|GET|allow you to get all the products you have in your inventory system
-|/getSpecificProduct/:productId|GET|allow you to search for any product
+|/addProduct|POST|allows you to add your products
+|/deleteProduct/:productId|DELETE|allows you to delete any product
+|/updateProduct/:productId|PUT|allows you to update/edit any product
+|/getSpecificCategory/:categoryName|GET|allows you to get all products that belongs a specific category
+|/getLimitedItems|GET|allows you to get all the limited products which need to be refiled
+|/getAllProducts|GET|allows you to get all the products you have in your inventory system
+|/getSpecificProduct/:productId|GET|allows you to search for any product
 
 
 
