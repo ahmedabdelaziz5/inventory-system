@@ -1,4 +1,4 @@
-# inventory application : 
+# inventory system : 
 
 #### This was my first task on my internship @Asterisc Technocrat 
 
